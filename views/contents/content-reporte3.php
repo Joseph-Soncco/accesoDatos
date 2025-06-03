@@ -43,38 +43,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>Max</td>
-        <td>Perro</td>
-        <td>Negro</td>
-        <td>Macho</td>
-        <td>Joseph</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Max</td>
-        <td>Perro</td>
-        <td>Negro</td>
-        <td>Macho</td>
-        <td>Joseph</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Max</td>
-        <td>Perro</td>
-        <td>Negro</td>
-        <td>Macho</td>
-        <td>Joseph</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Max</td>
-        <td>Perro</td>
-        <td>Negro</td>
-        <td>Macho</td>
-        <td>Joseph</td>
-      </tr>
+
+      <?php foreach($listaMascota as $mascota): ?>
+        <tr>
+          <td>1</td>
+          <td><?= $mascota['nombre'] ?></td>
+          <td><?= $mascota['tipo'] ?></td>
+          <td>Negro</td>
+          <td>Macho</td>
+          <td>Joseph</td>
+        </tr>
+      <?php endforeach ?>
     </tbody>
   </table>
 </body>

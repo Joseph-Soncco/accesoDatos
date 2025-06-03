@@ -1,14 +1,17 @@
 <?php
 //Este archivo funciona como un motor de RENDERIZADO
 //Input (HTML) > procesar > PDF
-//require_once dirname(__FILE__).'/../vendor/autoload.php';
 require_once '../../vendor/autoload.php';
+require_once '../../app/models/Mascota.php';
 
 use Spipu\Html2Pdf\Html2Pdf; //Core = núcleo librería
 use Spipu\Html2Pdf\Exception\Html2PdfException; //Identificación errores
 use Spipu\Html2Pdf\Exception\ExceptionFormatter; //Formatear pdf
 
 try {
+
+    $mascota = new Mascota();
+    $listaMascota = $mascota->getAll();
 
     ob_start();
     include_once '../contents/content-reporte3.php';
