@@ -26,7 +26,7 @@
       color: blue;
     }
   </style>
-  <h1>REPORTE DE MASCOTAS</h1>
+  <h1>REPORTE DE PROPIETARIOS</h1>
   <table>
     <colgroup>
       <col style="width: 10%">
@@ -39,23 +39,17 @@
     <thead>
       <tr>
         <th>ID</th>
-        <th>Nombre Mascota</th>
-        <th>Tipo</th>
-        <th>Color</th>
-        <th>Género</th>
-        <th>Propietario</th>
+        <th>Apellidos</th>
+        <th>Nombres</th>
       </tr>
     </thead>
     <tbody>
 
-      <?php foreach($listaMascota as $mascota): ?>
+      <?php foreach($lista as $propModel): ?>
         <tr>
-          <td><?= $mascota['idmascota'] ?></td>
-          <td><?= $mascota['nombre'] ?></td>
-          <td><?= $mascota['tipo'] ?></td>
-          <td><?= $mascota['color'] ?></td>
-          <td><?= $mascota['genero'] ?></td>
-          <td><?= $mascota['propietario'] ?></td>
+          <td><?= $propModel['idpropietario'] ?></td>
+          <td><?= $propModel['apellidos'] ?></td>
+          <td><?= $propModel['nombres'] ?></td>
         </tr>
       <?php endforeach ?>
     </tbody>
